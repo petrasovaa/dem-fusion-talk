@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   width="808.75"
+   height="845"
+   viewBox="0 0 808.75 845"
+   sodipodi:docname="diff_lid_uavGCPjune.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1875"
+     inkscape:window-height="1056"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="0.32"
+     inkscape:cx="-252.3969"
+     inkscape:cy="-2116.5181"
+     inkscape:window-x="45"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <image
+     sodipodi:absref="/home/anna/Documents/Projects/uav/NCGIS/img/elevation_shade.png"
+     xlink:href="elevation_shade.png"
+     width="796"
+     height="528"
+     preserveAspectRatio="none"
+     id="image4146"
+     x="933.55725"
+     y="2026.0741" />
+  <image
+     sodipodi:absref="/home/anna/Documents/Projects/uav/NCGIS/img/lrm_shaded.png"
+     xlink:href="lrm_shaded.png"
+     width="796"
+     height="528"
+     preserveAspectRatio="none"
+     id="image4157"
+     x="933.55725"
+     y="2554.0742" />
+  <image
+     sodipodi:absref="/home/anna/Documents/Projects/uav/NCGIS/img/profile1_compare.png"
+     xlink:href="profile1_compare.png"
+     width="1603"
+     height="781"
+     preserveAspectRatio="none"
+     id="image4179"
+     x="-705.80505"
+     y="35.355934" />
+  <image
+     sodipodi:absref="/home/anna/Documents/Projects/uav/NCGIS/img/diff_lid_uavGCPjune.jpg"
+     xlink:href="diff_lid_uavGCPjune.jpg"
+     y="1961.8813"
+     x="-1493.9174"
+     id="image10"
+     preserveAspectRatio="none"
+     height="845"
+     width="808.75" />
+  <image
+     sodipodi:absref="/home/anna/Documents/Projects/uav/NCGIS/img/gullyDSC06027.jpg"
+     xlink:href="gullyDSC06027.jpg"
+     width="760"
+     height="570"
+     preserveAspectRatio="none"
+     id="image4190"
+     x="-528.29236"
+     y="2499.3813" />
+  <image
+     sodipodi:absref="/home/anna/Documents/Projects/uav/NCGIS/img/kukurice.jpg"
+     xlink:href="kukurice.jpg"
+     width="1325.5555"
+     height="745.625"
+     preserveAspectRatio="none"
+     id="image4201"
+     x="-528.29236"
+     y="1753.7563" />
+</svg>

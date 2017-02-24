@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="351.93112mm"
+   height="568.18237mm"
+   viewBox="0 0 1247 2013.2447"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="overlap.svg"
+   inkscape:export-filename="/home/anna/Documents/Projects/uav/paper/img/render/overlap.png"
+   inkscape:export-xdpi="95.989998"
+   inkscape:export-ydpi="95.989998">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4181"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-3"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4181-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-5"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4181-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-5-6"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4181-3-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497476"
+     inkscape:cx="580.90375"
+     inkscape:cy="546.99111"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-others="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1400"
+     inkscape:window-height="1028"
+     inkscape:window-x="520"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:object-nodes="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(946.35718,1607.1378)">
+    <image
+       sodipodi:absref="/home/anna/Documents/Projects/uav/paper/img/render/overlay_width_legendraster.png"
+       xlink:href="file:///home/anna/Documents/Projects/uav/paper/img/render/overlay_width_legendraster.png"
+       y="284.8829"
+       x="-117.91999"
+       id="image5323"
+       preserveAspectRatio="none"
+       height="97"
+       width="409"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/anna/Documents/Projects/uav/paper/gitrepo/img/overlap.png" />
+    <image
+       sodipodi:absref="/home/anna/Documents/Projects/uav/paper/img/render/compare_diff.png"
+       xlink:href="file:///home/anna/Documents/Projects/uav/paper/img/render/compare_diff.png"
+       width="608"
+       height="722"
+       preserveAspectRatio="none"
+       id="image4151"
+       x="-935.7207"
+       y="-447.14011"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <image
+       sodipodi:absref="/home/anna/Documents/Projects/uav/paper/img/render/compare_diff_barscale.png"
+       xlink:href="file:///home/anna/Documents/Projects/uav/paper/img/render/compare_diff_barscale.png"
+       width="336"
+       height="65"
+       preserveAspectRatio="none"
+       id="image4162"
+       x="-502.24988"
+       y="298.96838"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <image
+       sodipodi:absref="/home/anna/Documents/Projects/uav/paper/img/render/compare_overlap.png"
+       xlink:href="file:///home/anna/Documents/Projects/uav/paper/img/render/compare_overlap.png"
+       width="608"
+       height="722"
+       preserveAspectRatio="none"
+       id="image4173"
+       x="-311.22311"
+       y="-447.14011"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <image
+       sodipodi:absref="/home/anna/Documents/Projects/uav/paper/img/render/compare_diff_legend.png"
+       xlink:href="file:///home/anna/Documents/Projects/uav/paper/img/render/compare_diff_legend.png"
+       width="316"
+       height="115"
+       preserveAspectRatio="none"
+       id="image4252"
+       x="-932.92859"
+       y="277.10687"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.60000038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M -566.53991,66.695555 -394.81397,-48.4618"
+       id="path4166"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.60000038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-3)"
+       d="M -6.9153482,68.71586 172.2603,-39.574802"
+       id="path4166-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.60000038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-5)"
+       d="M -153.30806,-250.9289 57.725413,-119.84774"
+       id="path4166-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.60000038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-5-6)"
+       d="m -753.33873,-234.76645 193.98865,107.83935"
+       id="path4166-5-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6186"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.00000381px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-1247.3827,-1558.6505)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><flowRegion
+         id="flowRegion6188"><rect
+           id="rect6190"
+           width="206.07112"
+           height="137.38078"
+           x="363.65491"
+           y="1209.1632"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.00000381px;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara6192">small difference</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6186-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.00000381px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-1103.007,-1194.0034)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><flowRegion
+         id="flowRegion6188-2"><rect
+           id="rect6190-7"
+           width="210.11172"
+           height="127.27927"
+           x="363.65491"
+           y="1209.1632"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.00000381px;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara6192-0">large difference</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6186-9"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.00000381px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-613.08936,-1573.7395)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><flowRegion
+         id="flowRegion6188-3"><rect
+           id="rect6190-6"
+           width="181.82747"
+           height="111.11683"
+           x="363.65491"
+           y="1209.1632"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.00000381px;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara6192-06">narrow zone</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6186-2"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.00000381px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-538.41929,-1141.4754)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><flowRegion
+         id="flowRegion6188-6"><rect
+           id="rect6190-1"
+           width="228.29448"
+           height="101.0153"
+           x="363.65491"
+           y="1209.1632"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45.00000381px;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara6192-8">wide zone</flowPara><flowPara
+         id="flowPara7772" /></flowRoot>  </g>
+</svg>
