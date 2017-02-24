@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   width="1133"
+   height="631"
+   viewBox="0 0 1133 631"
+   sodipodi:docname="problem.svg"
+   inkscape:export-filename="/home/anna/Documents/Projects/uav/NCGIS/img/problem_edit.png"
+   inkscape:export-xdpi="79.440002"
+   inkscape:export-ydpi="79.440002">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4209"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4191"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend-7"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4209-3"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend-1"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4209-2"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1467"
+     inkscape:window-height="840"
+     id="namedview4"
+     showgrid="false"
+     inkscape:object-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:zoom="0.40192124"
+     inkscape:cx="63.940892"
+     inkscape:cy="-39.042699"
+     inkscape:window-x="45"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <image
+     sodipodi:absref="/home/anna/Documents/Projects/uav/NCGIS/img/problem.png"
+     xlink:href="problem.png"
+     y="0"
+     x="0"
+     id="image10"
+     preserveAspectRatio="none"
+     height="631"
+     width="1133" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot4138"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:102.5px;line-height:125%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+     transform="translate(176.65152,-67.17734)"><flowRegion
+       id="flowRegion4140"><rect
+         id="rect4142"
+         width="370.33176"
+         height="116.66679"
+         x="45.742237"
+         y="497.29193"
+         style="font-size:102.5px;fill:#ffffff;fill-opacity:1;" /></flowRegion><flowPara
+       id="flowPara4144"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:102.5px;font-family:Lato;-inkscape-font-specification:Lato;fill:#ffffff;fill-opacity:1;">Lidar</flowPara></flowRoot>  <flowRoot
+     transform="translate(410.04466,-395.27227)"
+     xml:space="preserve"
+     id="flowRoot4138-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:97.5px;line-height:125%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"><flowRegion
+       id="flowRegion4140-1"><rect
+         id="rect4142-3"
+         width="288.2261"
+         height="149.01143"
+         x="45.742237"
+         y="497.29193"
+         style="font-size:97.5px;fill:#ffffff;fill-opacity:1;" /></flowRegion><flowPara
+       id="flowPara4144-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:97.5px;font-family:Lato;-inkscape-font-specification:Lato;fill:#ffffff;fill-opacity:1;">UAS</flowPara></flowRoot>  <path
+     style="fill:#ff656c;fill-opacity:0.06565659;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M -242.78571,1162.3137 899.01086,1155.2764 626.31677,1009.2531 293.8059,857.95187 22.871118,752.39286 -75.650617,717.20653 -223.43323,676.74224 -253.34161,664.42702 Z"
+     id="path4170"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:#00699f;fill-opacity:0.17676769;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 1097.8137,842.11801 -1187.538855,-1.75931 -7.037267,193.5248 29.096393,-12.8565 128.233842,37.6507 173.987577,60.1935 75.79746,29.5315 130.28992,50.7623 180.00654,80.1196 155.32392,70.6765 171.58053,89.9061 96.43184,51.6376 29.1977,15.635 z"
+     id="path4172"
+     inkscape:connector-curvature="0" />
+</svg>

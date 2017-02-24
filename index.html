@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<!-- This is a generated file. Do not edit. -->
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>UAV DEM fusion</title>
+
+        <meta name="description" content="NCGIS 2017 presentation">
+        <meta name="author" content="Anna Petrasova">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- For chalkboard plugin -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <style>
+        body {
+        /*background-color: #FFF !important;*/
+        /*
+          background-image: url("pictures/elevation-nagshead.gif");
+          background-repeat: no-repeat;
+          background-position: left bottom;*/
+        }
+        .reveal section img {
+            background: transparent;
+            border: 0;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+        }
+        /* for standalone frame */
+        /*
+        iframe {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        */
+        /* display: inline; background-color: #002B36; padding: 0px; margin: 0px */
+        .rounded-corners {
+            border: 0px solid black;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+        a {
+            color: #BB6A64 !important;
+        }
+        a:hover {
+            color: #3D3D3D !important;
+            text-decoration: underline !important;
+        }
+        h1, h2, h3, h4, h5 {
+            text-transform: none !important;
+            /* word-break: keep-all; text-transform: none; font-size: 200%; line-height: 110%; */
+            color: #3D3D3D !important;
+            /* color: #444 !important; */ /* grey from the wab page */
+            font-weight: bold !important;
+            -webkit-hyphens: none !important;
+            -moz-hyphens: none !important;
+            -ms-hyphens: none !important;
+            hyphens: none !important;
+            line-height: 110% !important;
+        }
+        .reveal .progress span {
+            background-color: #BB6A64 !important;
+        }
+        /* predefined element positioning */
+        .top {
+            /*position: relative;*/
+            top: 5%;
+            height: 45%; /* is the height even needed? */
+        }
+        .bottom {
+            height: 45%;
+        }
+        .ne {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            height: 45%;
+            width: 45%;
+        }
+        .nw {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            height: 45%;
+            width: 45%;
+        }
+        .se {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            height: 45%;
+            width: 45%;
+        }
+        .sw {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            height: 45%;
+            width: 45%;
+        }
+
+        /* classes for sections with predefined elements */
+        /* using !important because, reveal styles are applied afterwards  */
+        .right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol, .imgtext > div {
+            float: right;
+            text-align: left;
+            max-width: 47% !important;
+        }
+        .left, .imgtext > img, .imgtext > video, imgtext > iframe, .textimg > p, .textimg > ul, .textimg > ol, .textimg > div {
+            float: left;
+            text-align: left;
+            max-width: 47% !important;
+        }
+        li > ul, li > ol {
+            font-size: 85% !important;
+            line-height: 110% !important;
+        }
+        .small {
+            font-size: smaller !important;
+            color: gray;
+            margin: 0.1em !important;
+        }
+        .credit {
+            font-size: small !important;
+            color: gray;
+            margin: 0.1em !important;
+        }
+        .parent-page {
+            display: inline-block;
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            top: auto;
+            left: auto;
+            z-index: 30;
+            font-size: medium !important;
+        }
+        span.mexpr {
+            color: #BB6A64;
+            font-style: italic;
+        }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+<section data-background-image="img/bg_title.jpg">
+    <h1>Seamless fusion of high-resolution DEMs from multiple sources</h1>
+    <h4>Anna Petrasova, Helena Mitasova, Vaclav Petras, Justyna Jeziorska</h4>
+
+    <h4>Center for Geospatial Analytics, NCSU</h4>
+
+    <h4 style="margin-top:1em">NCGIS 2017</h4>
+    <aside class="notes">
+    Good afternoon ... and I will talk today about some of the UAV-related things
+    our group at NC State is doing, and then specifically about a quite simple but
+    practical method for fusing elevation data from different sources, which we found useful
+    in the context of modeling of landscape processes such as water flow and erosion.
+    </aside>
+</section>
+
+<section>
+<h2>Background</h2>
+<p>In partnership with NextGen Air Transportation System (NGAT)<br>
+Center for Geospatial Analytics (CGA) collects, processes and analyses UAS data
+for research and education purposes
+</p>
+
+<img src="img/takeoff.jpg" height="350px">
+<img src="img/sketchfab.jpg" height="350px">
+<img src="img/analysis.jpg" height="350px">
+
+<aside class="notes">
+    NC State's CGA  has a partnership with NextGen Air Transportation system,
+ where NGAT is collecting UAS data for different research end education purposes,
+ the data is then processed by colleagues at CGA and is used for modeling by students and researchers.
+</aside>
+</section>
+
+<!-- What we do at CGA -->
+<section class="imgtext">
+    <h2>UAS &amp; lidar course</h2>
+    
+<img src="img/course_photo.JPG" style="max-width:43% !important">
+<div style="max-width:53% !important">
+<p>Data collection and analysis:
+    <ul>
+        <li> flight planning, characteristics of UAS and lidar data,
+            errors, point cloud processing and DEM reconstruction,
+            landscape processes
+    </ul>
+    <p>Student projects:
+    <ul>
+        <li>mapping soil erosion, beaver dam impact</li>
+        <li>crop growth monitoring, forest structure</li>
+    </ul>
+<p>Software:
+<ul>
+    <li>GIS, SfM software (AgiSoft, OpenDroneMap), Python scripting</li>
+</ul>
+    </div>
+<aside class="notes">
+    We have been developping a special topics course which will eventually become
+    a full course on Unmanned Aerial Systems and lidar. The course covers
+    most aspects of UAS from flight planning, data collection, DEM and orthophoto reconstruction
+    to data analysis and modeling and we let students work on their own projects.
+    Software is of course important part, we use both open source  and propriatery software
+    depending on the tasks to give students more options, and we incorporate some Python scripting tasks.
+</aside>
+</section>
+
+<section>
+    <h2> Lake Wheeler Road Field Laboratory<br>study area</h2>
+    <h4>2015 - 2017</h4>
+    <img width="55%" src="img/overview_map.png">
+    <img width="40%" src="img/timeseries.gif">
+    
+    <aside class="notes">
+    Our main study area is located at the Lake Wheeler Road Field Laboratory,
+    because it's on NC State's property. It's an angriculture field,
+    and NGAT has been able to collect around 15 to 20 datasets
+    since 2015, soon the animation you can see shows the crop rotation, they grow
+    usually corn and similar crops.
+    </aside>
+</section>
+<section>
+    <h2>Data analysis</h2>
+    <img src="img/diff_lid_uav.jpg" height="400px">&nbsp;&nbsp;&nbsp;
+    <img src="img/field.jpg" height="400px">&nbsp;&nbsp;&nbsp;
+    <img src="img/microtopography.jpg" height="400px">
+    <table style="width=100%;border: 1px">
+        <col width="45%">
+        <col width="25%">
+        <col width="30%">
+        <tr><td>change detection</td>
+            <td>processes</td>
+            <td>microtopography</td>
+        </tr>
+    </table>
+    <aside class="notes">
+    This  dataset 
+    is giving us a lot of opportunities for exploring
+    change detection and the processes behind it, such as soil erosion and crop
+    growth, and since we get ultra high-resolution elevation information (we are talking about 1 feet resolution)
+    we also look at the microtopography of the field and what it reveals
+    about the terrain reconstruction methods and their errors and what sorts of useful information
+    we can get out of it.
+    </aside>
+</section>
+
+
+<section>
+    <h2>Modeling landscape processes</h2>
+    <h3>at a microtopographic level</h3>
+    <table>
+        <col width="33%">
+        <col width="28%">
+        <col width="33%">
+        <tr>
+            <td><img src="img/flowanim3d.gif" width="100%"></td>
+            <td align="center" style="vertical-align:middle">water flow<br><br>
+                erosion<br><br>
+                landscape evolution
+            </td>
+            <td><img src="img/landscape_evol.jpg"></td>
+        </tr>
+    </table>
+    <aside class="notes">
+    At this microtopographic level
+    we model landscape processes including water flow, erosion
+    and landscape evolution for erosion predection and prevention.
+    </aside>
+</section>
+
+<section class="textimg">
+<div><h3>UAS + SfM</h3>
+    <ul>
+        <li>very dense point clouds (hundreds per square meter)</li>
+        <li>simple to repeat data collection</li>
+        <li>smaller area</li>
+        <li>some areas are excluded</li>
+        <li>difficult to extract ground</li>
+    </ul><img src="img/uav_symbol.png"></div>
+
+<img src="img/flowanim3d.gif" width="100%">
+
+<aside class="notes">
+    For modeling landscape processes, UAS data processed through
+    Structure from motion present both opportunities and challenges.
+    ...
+</aside>
+</section>
+
+<section>
+<div class="left"><h3>UAS + SfM</h3>
+    <ul>
+        <li>very dense point clouds (hundreds per square meter)</li>
+        <li>simple to repeat data collection</li>
+        <li>smaller area</li>
+        <li>some areas are excluded</li>
+        <li>difficult to extract ground</li>
+    </ul><img src="img/uav_symbol.png"></div>
+<div class="right"><h3>Airborne lidar</h3>
+    <ul>
+        <li>moderately dense point clouds (several points per square meter)</li>
+        <li>expensive, can't be repeated often</li>
+        <li>large area</li>
+        <li>provides ground data</li>
+    </ul><img src="img/lidar_symbol.png"></div>
+    <aside class="notes">
+        On the other hand, we have lidar data thanks to NC Floodplain mapping
+        program....
+        Since both UAS- and lidar based DEMs have their advantages,
+        we will often have to combine those data sources .
+    </aside>
+</section>
+
+
+
+<section>
+    <h2>DEM fusion</h2>
+    <h4>aka DEM mosaicking, merging, patching</h4>
+<p style="text-align:left">Motivation:
+<ul>
+    <li>boundaries of UAS-based DEM and modeled phenomenon don't match (e.g. watersheds)</li>
+    <li>need to replace vegetated areas with ground</li>
+    <li>updating part of older DEM with newer DEM</li>
+</ul>
+<p style="text-align:left">What we need:
+<ul>
+    <li>simple and robust raster- and GIS-based method</li>
+    <li>continuous DEM with smooth transition between different
+    DEM sources</li>
+</ul>
+<aside class="notes">
+    
+</aside>
+</section>
+
+<section>
+<h2>Problem</h2> 
+<code>
+new = if(isnull(UAS), lidar, UAS)
+</code>
+<img class="stretch" src="img/problem_edit.png">
+</section>
+<section>
+    <h2>Water flow on patched DEM</h2> 
+<!-- <code>
+new = if(isnull(UAS_June), UAS_October, UAS_June)
+</code> -->
+<img class="stretch" src="img/problem_water_scale.png">
+</section>
+
+<section>
+<h2>Water flow on fused DEM</h2> 
+<img class="stretch" src="img/problem_solution_man_scale.png">
+</section>
+
+<section class="textimg">
+<h2>Fusion method (v1)</h2>
+<div style="max-width:41% !important">
+<p>Compute weighted average of DEM <span class="mexpr">$A$</span> and 
+    <span class="mexpr">$B$</span>
+    on their overlap of width <span class="mexpr">$s$</span>
+     with weights given by the distance
+    to the edge of DEM <span class="mexpr">$A$</span>.
+<p style="margin-top:2em">What do we need?
+    <ul>
+        <li>two DEMs of the same resolution and aligned</li>
+        <li>raster algebra</li>
+        <li>euclidean distance tool</li>
+    </ul>
+</div>
+<img src="img/schema2.png" style="max-width:57% !important">
+</section>
+
+
+<section>
+    <h2>Step 1.</h2>
+<table style="width=100%;">
+    <col width="48%">
+    <col width="50%">
+    <tr>
+    <td align="left" style="vertical-align:middle">
+        Distance from the edge of DEM <span class="mexpr">$A$</span>
+        <i>inwards</i>.
+        </td>
+    <td><img src=img/distance.png></td>
+</tr></table>
+<p style="text-align:left">GRASS GIS:
+<pre class="python" style="margin-left:0px ">
+<code>r.grow.distance -n input=A distance=distance
+</code></pre>
+</section>
+
+<section>
+    <h2>Step 2.</h2>
+<p style="text-align:left">
+    Linear combination of elevation surfaces $z_{A}$ and $z_{B}$
+with weights given by distance $d$ and overlap width $s$ :
+    $$
+    z_{AB} = z_{A} w + z_{B}(1 - w),
+\quad\quad
+    w = f(s, d) =
+    \begin{cases} 
+          \frac{d}{s} & 0 \leq d < s \\
+          1 & d > s
+    \end{cases}
+    $$
+<p style="margin-top:2em;text-align:left">
+Raster algebra expression for $s = 10$ m:
+<pre class="python" ><code>if (distance > 10, A,
+    if (distance == 0, B,
+        (1 - distance / 10) * B + (distance / 10 * A)
+    )
+)
+</code></pre>
+
+</section>
+<section>
+<h2>Smoothing parameter $s$</h2>
+<img width="24%" src="img/sm0.png">
+<img width="24%" src="img/sm5.png">
+<img width="24%" src="img/sm10.png">
+<img width="24%" src="img/sm20.png">
+<table width="98%"style="margin-left:1em">
+    <tr><td align="middle">0 m</td>
+        <td align="middle">5 m</td>
+        <td align="middle">10 m</td>
+        <td align="middle">20 m</td></tr>
+</table>
+</section>
+
+<section class="textimg">
+<h2>Fusion method (v2)</h2>
+<div style="max-width:40% !important">
+<p> By taking into account spatially variable differences <span class="mexpr">$\Delta z$</span>
+    between DEMs <span class="mexpr">$A$</span> and <span class="mexpr">$B$</span> along the overlap:
+    <ul>
+        <li>we get more gradual transition where differences are high</li>
+        <li>we preserve subtle features of both DEMs where differences are small</li>
+    </ul>
+</div>
+<img src="img/schema3.png" style="max-width:57% !important">
+</section>
+
+<section>
+    <h3>Fusion method (v2): example</h3>
+<img class="stretch" src="img/fusionv2.png">
+</section>
+
+<section>
+    <h2>Fusion method (v2): steps</h2>
+<ol>
+    <li>Compute <strong>distance</strong> from DEM $A$ inwards (distance tool).</li>
+    <li>Derive <strong>absolute difference</strong> between A and B, and
+        from that extract <strong>one-pixel-wide edge</strong> as raster (raster algebra).</li>
+    <li>Derive raster where each cell has the <strong>value
+        of the nearest cell</strong> from that edge raster (distance tool).</li>
+    <li>Combine the distance raster from step 1) and the raster with differences from step 3)
+    into raster representing <strong>weights</strong> (raster algebra).</li>
+    <li>Compute <strong>linear combination</strong> of DEMs using this raster of weights (raster algebra).</li>
+</ol>
+</section>
+
+<section class="textimg">
+    <h2>Use case: Tangible Landscape</h2>
+<div>
+<ul>
+    <li>tangible geospatial interface</li>
+    <li>couples a malleable physical model with a digital landscape
+    through a cycle of real-time scanning, analysis, and projection</li>
+</ul>
+<img src="img/TL_hand.png">
+ </div>
+ <img src="img/system_schema.svg">
+</section>
+
+<section>
+<h3>Fusion of lidar- and kinect-based DEMs</h3>
+<ul><li>simulating and testing methods for controlling storm water flow</li>
+    <li>we need smooth fusion to let simulated water flow into and out of the model</li>
+    <li>real-time fusion of a georeferenced, physical sand model scanned continuously by Kinect
+    with a lidar-based DEM of the surrounding watershed</li></ul>
+    <img width="25%" src="img/model.JPG">
+    <img width="35%" src="img/TL_before.JPG">
+    <img width="35%" src="img/TL_after.JPG">
+    <table width="90%"style="margin-left:2em">
+        <tr><td align="middle">sand model</td>
+        <td align="middle">before change</td>
+        <td align="middle">modified landscape</td></tr>
+    </table>
+</section>
+
+<section>
+<h2>Resources</h2>
+<ul>
+    <li>Method will be published in Open Geospatial Data, Software and Standards as open access article</li>
+    <li>GRASS GIS addon <a href="https://github.com/petrasovaa/r.patch.smooth">r.patch.smooth</a>
+        <small><code>g.extension r.patch.smooth url=https://github.com/petrasovaa/r.patch.smooth</code></small></li>
+    <li>Sample dataset for testing:
+            <a href="https://geospatial.ncsu.edu/osgeorel/data.html">geospatial.ncsu.edu/osgeorel/data.html</a></li>
+</ul>
+<img width="90%" src="img/rpatchsmooth2.png">
+</section>
+<!-- This is a generated file. Do not edit. -->
+        </div>  <!-- slides -->
+
+    </div>  <!-- reveal -->
+    <!--
+        Home button or link to a parent page
+        If you want this to be unique for every page (slide deck),
+        then remove it from here and put it at the end of each
+        file (or series of files) creating one page
+        (the position will be little different)
+        TODO: some JS is needed to move it to the right position
+    -->
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                // Display controls in the bottom right corner
+                controls: false,
+
+                // Display a presentation progress bar
+                progress: true,
+                
+                center: true,
+                
+                // Display the page number of the current slide
+                slideNumber: false,
+
+                // Enable the slide overview mode
+                overview: true,
+
+                // Turns fragments on and off globally
+                fragments: true,
+
+                // The "normal" size of the presentation, aspect ratio will be preserved
+                // when the presentation is scaled to fit different resolutions. Can be
+                // specified using percentage units.
+                width: 1160,
+                height: 700,
+                
+                // Factor of the display size that should remain empty around the content
+                margin: 0.05,  // increase?
+
+                // Bounds for smallest/largest possible scale to apply to content
+                minScale: 0.5,
+                maxScale: 5.0,
+
+                theme: Reveal.getQueryHash().theme,  // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Push each slide change to the browser history
+                history: true,
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+
+                // Vertical centering of slides
+                center: true,
+
+                // Enables touch navigation on devices with touch input
+                touch: true,
+
+                // Loop the presentation
+                loop: false,
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
+
+                // Number of milliseconds between automatically proceeding to the
+                // next slide, disabled when set to 0, this value can be overwritten
+                // by using a data-autoslide attribute on your slides
+                autoSlide: 0,
+
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
+
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
+
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+
+                // Opens links in an iframe preview overlay
+                previewLinks: false,
+
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'none', // default/none/slide/concave/convex/zoom
+
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
+
+                // Parallax background image
+                //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+                // Parallax background size
+                //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/math/math.js', async: true }
+                ],
+            });
+
+        </script>
+
+    </body>
+</html>
